@@ -1,0 +1,100 @@
+{
+    "projets" : [
+        {
+          "idP": 1,
+          "nomP": "Projet de développement",
+          "category": "Développement logiciel",
+          "descriptionP": "Un projet pour développer un nouveau logiciel de gestion",
+          "dateDebutP": "2023-02-15T00:00:00.000Z",
+          "dateFinP": "2024-02-15T00:00:00.000Z",
+          "Budget": 5000
+        },
+        {
+          "idP": 2,
+          "nomP": "Projet de recherche",
+          "category": "Recherche scientifique",
+          "descriptionP": "Un projet pour faire avancer la recherche sur les cellules souches",
+          "dateDebutP": "2023-03-01T00:00:00.000Z",
+          "dateFinP": "2025-03-01T00:00:00.000Z",
+          "Budget": 10000
+        },
+        {
+          "idP": 3,
+          "nomP": "Projet de construction",
+          "category": "Construction de bâtiments",
+          "descriptionP": "Un projet pour construire un nouveau centre commercial",
+          "dateDebutP": "2023-04-01T00:00:00.000Z",
+          "dateFinP": "2024-12-31T00:00:00.000Z",
+          "Budget": 20000
+        }
+      ],
+    "taches" :[
+        {
+          "idTache": 1,
+          "titre": "Développement de l'interface utilisateur",
+          "description": "Développer l'interface utilisateur pour le nouveau logiciel de gestion",
+          "dateDebutT": "2023-02-15T09:00:00.000Z",
+          "FK_idP": 1
+        },
+        {
+          "idTache": 2,
+          "titre": "Conception de la base de données",
+          "description": "Concevoir la base de données pour le nouveau logiciel de gestion",
+          "dateDebutT": "2023-02-16T10:00:00.000Z",
+          "FK_idP": 1
+        },
+        {
+          "idTache": 3,
+          "titre": "Analyse des besoins",
+          "description": "Analyser les besoins des utilisateurs pour le nouveau logiciel de gestion",
+          "dateDebutT": "2023-02-17T11:00:00.000Z",
+          "FK_idP": 1
+        }
+      ],
+    "users" : [
+        {
+          "idUtilisateur": 1,
+          "nom": "Dupont",
+          "prenom": "Jean",
+          "login": "jean.dupont",
+          "mdp": "password123",
+          "titre": "Développeur"
+        },
+        {
+          "idUtilisateur": 2,
+          "nom": "Martin",
+          "prenom": "Sophie",
+          "login": "sophie.martin",
+          "mdp": "password456",
+          "titre": "Testeur"
+        },
+        {
+          "idUtilisateur": 3,
+          "nom": "Leblanc",
+          "prenom": "Pierre",
+          "login": "pierre.leblanc",
+          "mdp": "password789",
+          "titre": "DevOps"
+        }
+      ],
+    "timesheets" : [
+        {
+          "idTimesheet": 1,
+          "nbrHeures": 8,
+          "FK_Projet": 1,
+          "FK_utilisateur": 1
+        },
+        {
+          "idTimesheet": 2,
+          "nbrHeures": 6,
+          "FK_Projet": 1,
+          "FK_utilisateur": 2
+        },
+        {
+          "idTimesheet": 3,
+          "nbrHeures": 7,
+          "FK_Projet": 1,
+          "FK_utilisateur": 3
+        }
+      ]
+}

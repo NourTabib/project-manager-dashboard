@@ -1,0 +1,38 @@
+<div id="root">
+  <div  class="container">
+
+    <br>
+    <br>
+  <br>
+  <br>
+  <h1>Projet Management</h1>
+  <hr>
+  <br>
+  <br>
+  <h2>Liste des projets</h2>
+  <hr>
+  <br>
+  <br>
+  <div class="list-group">
+    <a class="list-group-item list-group-item-action" *ngFor="let projet of Projets" [routerLink]="['/projet', projet.idP]">
+      <div class="d-flex w-100 justify-content-between">
+        <h5 class="mb-1">{{ projet.nomP }}</h5>
+        <small>{{ projet.dateDebutP | date }}</small>
+      </div>
+      <p class="mb-1">{{ projet.descriptionP }}</p>
+      <small>Budget: {{ projet.Budget }}</small>
+    </a>
+  </div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+</div>
+  
+  
+  

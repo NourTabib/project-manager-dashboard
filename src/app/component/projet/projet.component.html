@@ -1,0 +1,70 @@
+<br>
+<br>
+<br>
+<div id="root">
+
+  <div class="container">
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <h2>{{ Project.nomP }}</h2>
+  <p>{{ Project.descriptionP }}</p>
+  <div class="row">
+    <div class="col-md-12">
+      <button class="btn btn-primary mr-2" >Terminer Project</button>
+          <button class="btn btn-danger">Annuler Project</button>
+        </div>
+      </div>
+    <div class="row">
+      <div class="col-md-6">
+        <p><strong>Date de début: </strong>{{ Project.dateDebutP | date }}</p>
+      </div>
+      <div class="col-md-6">
+        <p><strong>Date de fin: </strong>{{ Project.dateFinP | date }}</p>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col-md-6">
+        <p><strong>Catégorie: </strong>{{ Project.category }}</p>
+      </div>
+      <div class="col-md-6">
+        <p><strong>Budget: </strong>{{ Project.Budget }}</p>
+      </div>
+    </div>
+    <h3>Liste des Consultants</h3>
+    <div class="row">
+      <ul class="list-group border">
+        <li class="list-group-item" *ngFor="let user of Users">
+          {{ user.nom }} {{ user.prenom }}
+          <button class="btn btn-primary btn-sm float-end" >Assigner</button>
+        </li>
+      </ul>
+    </div>
+    <div class="row">
+      <h2>Timesheets</h2>
+<ul class="list-group border">
+  <li class="list-group-item list-group-item-action" *ngFor="let timesheet of TimeSheets">
+    <div class="d-flex justify-content-between align-items-center">
+      <div>Utilisateur: {{ timesheet.FK_utilisateur }}</div>
+      <div>Heures: {{ timesheet.nbrHeures }}</div>
+    </div>
+  </li>
+</ul>
+</div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+</div>
